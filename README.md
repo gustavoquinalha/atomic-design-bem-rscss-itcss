@@ -94,6 +94,7 @@ Organismo
   &.btn-primary {
     @extend btn-primary();
   }
+  
   &.btn-secundary {
     @extend btn-secundary();
   }
@@ -101,6 +102,7 @@ Organismo
   &.btn-small {
     @extend btn-small();
   }
+  
   &.btn-large {
     @extend btn-large();
   }
@@ -129,9 +131,11 @@ Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos c
 .container {
   display: flex
 }
+
 .align-items-center {
   align-items: center
 }
+
 .justify-content: center {
   justify-content: center
 }
@@ -156,15 +160,19 @@ Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos c
 .margin-10 {
   margin: 10px;
 }
+
 .margin-top-10 {
   margin-top: 10px
 }
+
 .margin-right-10 {
   margin-right: 10px
 }
+
 .margin-bottom-10 {
   margin-bottom: 10px
 }
+
 .margin-left-10 {
   margin-left: 10px
 }
