@@ -40,6 +40,8 @@ $color-secundary: #ff4455;
 $btn-size-small: 22px;
 $btn-size: 32px;
 $btn-size-large: 42px;
+
+$size: 1200px;
 ```
 
 Molécula
@@ -49,14 +51,35 @@ Molécula
     font-weigth: 400;
 }
 
+@mixin btn-normal() {
+    font-size: $btn-size;
+    font-weigth: 400;
+}
+
 @mixin btn-large() {
     font-size: $btn-size-large;
     font-weigth: bold;
+}
+
+@mixin btn-primary() {
+    background-color: $color-primary;
+    color: #fff
+}
+
+@mixin btn-secundary() {
+    background-color: $color-secundary;
+    color: #000
 }
 ```
 
 Organismo
 ```css
+.size {
+  width: $size;
+  max-width: 100%;
+  margin: 0 auto
+}
+
 .btn {
   /* ... */
   
@@ -64,17 +87,17 @@ Organismo
 
   // variants
   &.btn-primary {
-    background-color: $color-primary;
+    @extend btn-primary();
   }
   &.btn-secundary {
-    background-color: $color-secundary;
+    @extend btn-secundary();
   }
   
   &.btn-small {
     @extend btn-small();
   }
   &.btn-large {
-    @extend btn-small();
+    @extend btn-large();
   }
 }
 ```
