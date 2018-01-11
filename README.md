@@ -1,5 +1,6 @@
 # Atomic Design + RSCSS
 > http://rscss.io/ | http://bradfrost.com/blog/post/atomic-web-design/
+> https://medium.com/re-write/the-unicorn-workflow-design-to-code-with-atomic-design-principles-and-sketch-8b0fe7d05a37
 
 - Átomo (Items do styleguide/Variáveis)
 - Molécula (Styleguide)
@@ -14,9 +15,6 @@
 - assets
   - css
     - main.scss
-    - variables
-      - _colors.scss
-      - _sizes.scss
     - styleguide
       - _colors.scss
       - _fonts.scss
@@ -31,8 +29,49 @@
       - _title.scss
       
 # Code
+_colors.scss
+```scss
+$white: #fff;
+$black: #000;
+$color-primary: #0081ff;
+$color-secundary: #ff4455;
+$grey: #ddd;
+```
 
-Átomo
+_buttons.scss
+```scss
+$btn-size-small: 22px;
+$btn-size: 32px;
+$btn-size-large: 42px;
+$btn-radius: 4px;
+$btn-rounded: 30px;
+
+btn {
+  background-color: $grey;
+  color: $white;
+  font-size: $btn-size;
+  border-radius: $btn-radius;
+
+  &.btn-primary {
+    background-color: $color-primary;
+  }
+  
+  &.btn-secundary {
+    background-color: $color-secundary;
+    color: $black;
+  }
+  
+  &.btn-small {
+    font-size: $btn-size-small;
+  }
+  
+  &.btn-large {
+    font-size: $btn-size-large;
+  }
+}
+```
+
+Variáveis(Atomos)
 ```scss
 // base
 $size: 1200px;
@@ -47,7 +86,7 @@ $btn-size: 32px;
 $btn-size-large: 42px;
 ```
 
-Molécula
+Styleguide(Molécula)
 ```scss
 @mixin btn-small() {
     font-size: $btn-size-small;
@@ -78,6 +117,8 @@ Molécula
     align-items: center;
     justify-content: center;
 }
+
+
 ```
 
 Organismo
