@@ -1,29 +1,13 @@
 # Atomic Design + RSCSS
-- http://rscss.io/
-- http://bradfrost.com/blog/post/atomic-web-design/
+> http://rscss.io/ | http://bradfrost.com/blog/post/atomic-web-design/
 
-- Átomo (Items do styleguide/Variaveis)
+- Átomo (Items do styleguide/Variáveis)
 - Molécula (Styleguide)
 - Organismo (Micro-componentes)
 - Template (Componente)
 - Pages (Pàgina)
 
 ![Image](http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png)
-
-# CODE
-> SCSS
-
-```css
-.search-form {
-  > .button { /* ... */ }
-  > .field { /* ... */ }
-  > .label { /* ... */ }
-
-  // variants
-  &.-small { /* ... */ }
-  &.-wide { /* ... */ }
-}
-```
 
 # Tree
 
@@ -45,6 +29,8 @@
       - _login.scss
       - _card.scss
       - _title.scss
+      
+# Code
 
 Átomo
 ```css
