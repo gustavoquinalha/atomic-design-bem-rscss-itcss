@@ -1,0 +1,31 @@
+{
+  "name": "atomic-design-rscss",
+  "version": "1.0.0",
+  "description": "> http://rscss.io/ | http://bradfrost.com/blog/post/atomic-web-design/ > https://medium.com/re-write/the-unicorn-workflow-design-to-code-with-atomic-design-principles-and-sketch-8b0fe7d05a37 > https://github.com/bradfrost/patternlab/blob/master/css/style.scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gustavoquinalha/atomic-design-rscss.git"
+  },
+  "author": "gustavoquinalha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gustavoquinalha/atomic-design-rscss/issues"
+  },
+  "homepage": "https://github.com/gustavoquinalha/atomic-design-rscss#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "breakpoint-sass": "^2.7.0",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0"
+  }
+}

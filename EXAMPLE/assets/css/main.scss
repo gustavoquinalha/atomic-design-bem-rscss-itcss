@@ -1,0 +1,9 @@
+// Base
+@import "base/_reset";
+@import "base/_variables";
+
+.teste {
+  width: 100%;
+  height: 100vh;
+  background: $color-primary;
+}
