@@ -3,6 +3,8 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var browserSync = require('browser-sync').create();
+var rename = require("gulp-rename");
+var cleanCSS = require('gulp-clean-css');
 
 var input = './assets/css/main.scss';
 var output = './assets/css';
@@ -34,6 +36,8 @@ gulp.task('sass', function() {
         .pipe(sass(sassOptions).on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(autoprefixer(autoprefixerOptions))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(rename("style.min.css"))
         .pipe(gulp.dest(output))
         .pipe(browserSync.stream());
 });
