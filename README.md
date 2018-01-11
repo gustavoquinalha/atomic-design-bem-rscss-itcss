@@ -10,7 +10,9 @@
 
 ![Image](http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png)
 
-# Tree
+# Plano A
+
+## Tree
 
 - assets
   - css
@@ -28,7 +30,7 @@
       - _card.scss
       - _title.scss
       
-# Code
+### Code
 _colors.scss
 ```scss
 $white: #fff;
@@ -46,7 +48,7 @@ $btn-size-large: 42px;
 $btn-radius: 4px;
 $btn-rounded: 30px;
 
-btn {
+.btn {
   background-color: $grey;
   color: $white;
   font-size: $btn-size;
@@ -70,7 +72,14 @@ btn {
   }
 }
 ```
+# Plano B 
 
+## Tree
+- assets
+  - css
+    - main.scss
+    
+### Code
 Variáveis(Atomos)
 ```scss
 // base
@@ -84,6 +93,8 @@ $color-secundary: #ff4455;
 $btn-size-small: 22px;
 $btn-size: 32px;
 $btn-size-large: 42px;
+$btn-radius: 4px;
+$btn-rounded: 30px;
 ```
 
 Styleguide(Molécula)
@@ -117,8 +128,6 @@ Styleguide(Molécula)
     align-items: center;
     justify-content: center;
 }
-
-
 ```
 
 Organismo
@@ -168,35 +177,9 @@ Componente
 # Problemas
 Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos criar 5 classes diferentes(DEPENDENDO MUITO DO CASO).
 
-```scss
-.container {
-  display: flex
-}
-
-.align-items-center {
-  align-items: center
-}
-
-.justify-content: center {
-  justify-content: center
-}
-
-@mixin align-content-center() {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.align-center {
-  @extend align-content-center();
-}
-```
-```html
-<div class="align-center"></div>
-<div class="container align-items-center justify-content"></div>
-```
-
 # Liberdade atômica
+
+## Caso 1
 ```css
 .margin-10 {
   margin: 10px;
@@ -225,4 +208,33 @@ Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos c
 <div class="margin-left-10">Margin a esquerda</div>
 <div class="margin-top-10 margin-left-10">Margin ao topo e a esquerda</div>
 <div class="margin-10"></div>
+```
+
+## Caso 2
+```scss
+.container {
+  display: flex
+}
+
+.align-items-center {
+  align-items: center
+}
+
+.justify-content: center {
+  justify-content: center
+}
+
+@mixin align-content-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.align-center {
+  @extend align-content-center();
+}
+```
+```html
+<div class="align-center"></div>
+<div class="container align-items-center justify-content"></div>
 ```
