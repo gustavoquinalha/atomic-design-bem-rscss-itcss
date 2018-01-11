@@ -1,6 +1,7 @@
 # Atomic Design + RSCSS
 > http://rscss.io/ | http://bradfrost.com/blog/post/atomic-web-design/
 > https://medium.com/re-write/the-unicorn-workflow-design-to-code-with-atomic-design-principles-and-sketch-8b0fe7d05a37
+> https://github.com/bradfrost/patternlab/blob/master/css/style.scss
 
 - Átomo (Items do styleguide/Variáveis)
 - Molécula (Styleguide)
@@ -16,23 +17,39 @@
 
 - assets
   - css
-    - main.scss
+    - _main.scss
+    - base
+      - _variables.scss
+      - _reset.scss
     - styleguide
+      - _grid.scss
       - _colors.scss
+      - _borders.scss
       - _fonts.scss
       - _inputs.scss
       - _buttons.scss
-      - _base.scss
+      - _icons.scss
     - components
+      - _main.scss
+      - _layout.scss
       - _menu.scss
       - _footer.scss
       - _login.scss
-      - _card.scss
       - _title.scss
-      
+      - _icons.scss
+      - cards/
+        - _card.scss
+        - _simple-card.scss
+  - images
+  - js
+- pages
+- components
+- index.html
+
 ### Code
-_colors.scss
+_variables.scss
 ```scss
+// colors
 $white: #fff;
 $black: #000;
 $color-primary: #0081ff;
