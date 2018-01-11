@@ -33,12 +33,14 @@
 # Code
 
 Átomo
-```css
+```scss
 // base
 $size: 1200px;
+
 // colors
 $color-primary: #0081ff;
 $color-secundary: #ff4455;
+
 // buttons style
 $btn-size-small: 22px;
 $btn-size: 32px;
@@ -46,7 +48,7 @@ $btn-size-large: 42px;
 ```
 
 Molécula
-```css
+```scss
 @mixin btn-small() {
     font-size: $btn-size-small;
     font-weigth: 400;
@@ -79,7 +81,7 @@ Molécula
 ```
 
 Organismo
-```css
+```scss
 .size {
   width: $size;
   max-width: 100%;
@@ -106,7 +108,7 @@ Organismo
 ```
 
 Componente
-```css
+```scss
 .container-header {
   /* ... */
 
@@ -123,7 +125,7 @@ Componente
 # Problemas
 Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos criar 5 classes diferentes(DEPENDENDO MUITO DO CASO).
 
-```css
+```scss
 .container {
   display: flex
 }
@@ -143,16 +145,10 @@ Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos c
 .align-center {
   @extend align-content-center();
 }
-
+```
+```html
 <div class="align-center"></div>
 <div class="container align-items-center justify-content"></div>
-
-<div class="margin-top-10">Margin ao topo</div>
-<div class="margin-right-10">Margin a direita</div>
-<div class="margin-bottom-10">Margin em baixo</div>
-<div class="margin-left-10">Margin a esquerda</div>
-
-<div class="margin-10"></div>
 ```
 
 # Liberdade atômica
@@ -172,7 +168,8 @@ Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos c
 .margin-left-10 {
   margin-left: 10px
 }
-
+```
+```html
 <div class="margin-top-10">Margin ao topo</div>
 <div class="margin-right-10">Margin a direita</div>
 <div class="margin-bottom-10">Margin em baixo</div>
