@@ -1,5 +1,23 @@
-# Atomic Design + BEM + RSCSS
+# Atomic Design + BEM + ITCSS
 ![Image](http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png)
+
+## Problemas
+- Organização de código, elementos e pastas
+- Nomenclatura de elementos e pastas
+- Padrões de código
+- Herança de classes
+- Redundância de código
+- Dificuldade de manutenção
+- Isso é um componente?
+
+### Atomic Design
+Organização de pastas, variáveis, componentes, templates... Tudo deve ser atômico e reutilizável.
+
+### BEM CSS
+Organização da nomenclatura
+
+### ITCSS
+Organização hierárquica
 
 ## Composição
 - Átomo (Items do styleguide/Variáveis)
@@ -12,6 +30,7 @@
 - Flexbox
 - Container é responsável pelo comportamento dos items
 - Baseado em Container e Item/pai e filho
+
 EX:
 
 ```html
