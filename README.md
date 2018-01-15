@@ -41,20 +41,18 @@ EX:
 - Element
 - Modifier
 
-```scss
-block--element-modifier
-
+```html
 <div class="block">
-	<div class="block__element block__element-red">
+  <div class="block__element block__element-red">
     <div class="block__element--image">...</div>
     <div class="block__element--text">...</div>
     <div class="block__element--button">...</div>
   </div>
 </div>
   
-<button class="button">Normal button</button>
-<button class="button button--state-success">Success button</button>
-<button class="button button--state-danger">Danger button</button>
+<button class="btn">Normal button</button>
+<button class="btn btn-large">Large button</button>
+<button class="btn btn-success">Success button</button>
 ```
 
 ## Estrutura de pastas
