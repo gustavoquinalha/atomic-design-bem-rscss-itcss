@@ -244,5 +244,6 @@ $btn-rounded: 30px;
 - http://getbem.com/introduction/
 - http://rscss.io/
 - https://itcss.io/
+- https://willianjusten.com.br/organizando-seu-css-com-itcss/
 - https://medium.com/re-write/the-unicorn-workflow-design-to-code-with-atomic-design-principles-and-sketch-8b0fe7d05a37
 - https://github.com/bradfrost/patternlab/blob/master/css/style.scss
