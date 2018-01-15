@@ -1,4 +1,4 @@
-# Atomic Design + BEM + ITCSS
+# Atomic Design + BEM + RSCSS + ITCSS
 ![Image](http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png)
 
 ## Problemas
@@ -16,8 +16,11 @@ Organização de pastas, variáveis, componentes, templates... Tudo deve ser at�
 ### BEM CSS
 Organização da nomenclatura
 
-### ITCSS
+### RSCSS
 Organização hierárquica
+
+### ITCSS
+Organização hierárquica(pirâmide)
 
 ## Composição
 - Átomo (Items do styleguide/Variáveis)
