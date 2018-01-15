@@ -1,9 +1,7 @@
+# Atomic Design + BEM + RSCSS
 ![Image](http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png)
 
-# Atomic Design + BEM + RSCSS
-
 ## Composição
-
 - Átomo (Items do styleguide/Variáveis)
 - Molécula (Styleguide)
 - Organismo (Micro-componentes)
@@ -13,12 +11,19 @@
 ## Estrutura HTML
 - Flexbox
 - Container é responsável pelo comportamento dos items
-- Baseado em container e item ou pai e filho
+- Baseado em Container e Item/pai e filho
 EX:
 
 ```html
 <div class="container">
   <div class="item"></div>
+</div>
+
+<div class="container">
+  <div class="item container">
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
 </div>
 
 <div class="pai">
@@ -31,7 +36,7 @@ EX:
 ```
 
 ## Nomenclatura das classes
-> Based in BEM | http://getbem.com/naming/
+> Baseado no BEM | http://getbem.com/naming/
 - Block
 - Element
 - Modifier
@@ -108,11 +113,11 @@ block--element-modifier
 _variables.scss
 ```scss
 // colors
-$white: #fff;
-$black: #000;
+$color-white: #fff;
+$color-black: #000;
 $color-primary: #0081ff;
 $color-secundary: #ff4455;
-$grey: #ddd;
+$color-grey: #ddd;
 ```
 
 _buttons.scss
@@ -125,7 +130,7 @@ $btn-rounded: 30px;
 
 .btn {
   background-color: $grey;
-  color: $white;
+  color: $color-white;
   font-size: $btn-size;
   border-radius: $btn-radius;
 
@@ -135,7 +140,7 @@ $btn-rounded: 30px;
   
   &.btn-secundary {
     background-color: $color-secundary;
-    color: $black;
+    color: $color-black;
   }
   
   &.btn-small {
@@ -147,9 +152,6 @@ $btn-rounded: 30px;
   }
 }
 ```
-
-# Problemas
-Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos criar 5 classes diferentes(DEPENDENDO MUITO DO CASO).
 
 # Liberdade atômica
 
@@ -194,23 +196,24 @@ Deixar mais atômico: Ao invés de dar um @extend com 5 propriedades , podemos c
   align-items: center
 }
 
-.justify-content: center {
+.justify-content-center {
   justify-content: center
 }
 
-@mixin align-content-center() {
+.container-align-center {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-.align-center {
-  @extend align-content-center();
-}
 ```
 ```html
-<div class="align-center"></div>
-<div class="container align-items-center justify-content"></div>
+<div class="container-align-center">
+  ...
+</div>
+
+<div class="container align-items-center justify-content-center">
+  ...
+</div>
 ```
 
 ## Links
