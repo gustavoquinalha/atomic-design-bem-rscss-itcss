@@ -34,8 +34,8 @@ Organização hierárquica(pirâmide)
 
 ## Estrutura HTML
 - Flexbox
-- Container é responsável pelo comportamento dos items
 - Baseado em Container e Item/pai e filho
+- Container é responsável pelo comportamento dos items
 
 EX:
 
