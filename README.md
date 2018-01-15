@@ -1,6 +1,9 @@
 # Atomic Design + BEM + RSCSS + ITCSS
 ![Image](http://atomicdesign.bradfrost.com/images/content/instagram-atomic.png)
 
+## Por quê?
+Crie esse repositório para organizar minha metodologia, afim de conhecer todas e abstrair o melhor de cada.
+
 ## Problemas
 - Organização de código, elementos e pastas
 - Nomenclatura de elementos e pastas
@@ -237,7 +240,9 @@ $btn-rounded: 30px;
 ```
 
 ## Links
-- http://rscss.io/
 - http://bradfrost.com/blog/post/atomic-web-design/
+- http://getbem.com/introduction/
+- http://rscss.io/
+- https://itcss.io/
 - https://medium.com/re-write/the-unicorn-workflow-design-to-code-with-atomic-design-principles-and-sketch-8b0fe7d05a37
 - https://github.com/bradfrost/patternlab/blob/master/css/style.scss
