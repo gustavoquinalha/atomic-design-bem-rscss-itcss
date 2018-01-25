@@ -66,18 +66,34 @@ EX:
 - Element
 - Modifier
 
+#### EX:
+- PAI__FILHO
+- PAI__FILHO&PAI__FILHO
+
 ```html
 <div class="block">
-  <div class="block__element block__element-red">
-    <div class="block__element--image">...</div>
+  <div class="block__element block__element_red">
+    <div class="block__element--element">...</div>
     <div class="block__element--text">...</div>
     <div class="block__element--button">...</div>
   </div>
 </div>
+
+<div class="block">
+  <div class="block__element">
+    <div class="block__element__element">
+      <div class="block__element__element--element-child">
+        ...
+      </div>
+    </div>
+    <div class="block__element__element">
+    </div>
+  </div>
+</div>
   
 <button class="btn">Normal button</button>
-<button class="btn btn-large">Large button</button>
-<button class="btn btn-success">Success button</button>
+<button class="btn btn_large">Large button</button>
+<button class="btn btn_success">Success button</button>
 ```
 
 ## Estrutura de pastas
